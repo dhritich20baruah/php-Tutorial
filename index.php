@@ -43,7 +43,29 @@
         echo "<hr>";
         echo abs(-100); #absolute value
         echo "<hr>";
+        echo pow(2,4);
+        echo "<hr>";
+        echo sqrt(196);
+        echo "<hr>";
+        echo max(2, 10);
+        echo min(2, 10);
+        echo round(3.2);
+        echo ceil(3.3);
+        echo floor(3.3); 
+        echo "<hr>";
+        echo "<h1>Getting user input</h1>";
+        echo "<br>";
+    
+    
 
     ?>
+        <form action="php-server.php" method="get">
+            Name: <input type="text" name="name" id="name">
+            <br>
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <br>
+        <?php echo $_GET["name"] ?>
 </body>
 </html>
