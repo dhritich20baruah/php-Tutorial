@@ -6,15 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-        <form action="index.php" method="get">
-            First number: <input type="number" name="num1" id="num1">
-            <br>
-            Second number: <input type="number" name="num2" id="num2">
-            <br>
+        <?php 
+            $numbers = array(1,2,3,4,5);
+            $numbers[3] = 44;
+            echo $numbers[3];
+            echo count($numbers);
+        ?>
+
+        <form action="index.php" method="post">
+            Apple: <input type="checkbox" name="fruits[]" value="apple">
+            Orange: <input type="checkbox" name="fruits[]" value="oranges"/>
+            Pear: <input type="checkbox" name="fruits[]" value="pear">
+            banana: <input type="checkbox" name="fruits[]" value="oranges"/>
             <button type="submit">SUBMIT</button>
         </form>
 
-        <br>
-        <p>Sum :<?php echo $_GET["num1"] + $_GET["num2"]?></p>
+        <?php 
+            $fruits = $_POST["fruits"];
+            echo $fruits[1];
+        ?>
+
+        <h1>Associative array</h1>
+        <?php
+            $grades = array("Jim"=>"A+", "Pam"=>"A", "Tom"=>"+B");
+            echo $grades["Tom"];
+            echo count($grades);
+        ?>
 </body>
 </html>
