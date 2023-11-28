@@ -32,5 +32,59 @@
             echo $grades["Tom"];
             echo count($grades);
         ?>
+
+        <h1>Functions</h1>
+        <?php
+            function sayHi($name, $age){
+                echo "Hello $name, you are $age";
+            }
+
+            sayHi("Dhriti", 35)
+        ?>
+
+        <h1>Return statements</h1>
+        <?php
+            function cube($num){
+                return pow($num, 3);
+            }
+
+            echo cube(3)
+        ?>
+
+        <h1>If Statement</h1>
+          <?php
+            $isMale = true;
+            $isTall = true;
+            if($iMale && $isTall){
+                echo "U R Male and tall";
+            }elseif ($isMale && !$isTall){
+                echo "U R male but not tall"; 
+            }
+            else {
+                echo "U R not male and not tall";
+            }
+
+            function getMax($num1, $num2){
+                if($num1>$num2){
+                    return $num1;
+                }
+                else{
+                    return $num2;
+                }
+            }
+
+            echo getMax(3, 90);
+
+            function getMaxOfThree($num1, $num2, $num3){
+                if($num1>=$num2 & $num1>=$num3){
+                    return $num1;
+                }elseif($num2>=$num1 & $num2>=$num3){
+                    return $num2;
+                }else{
+                    return $num3;
+                }
+            }
+            echo getMaxOfThree(45,23,53)
+          ?>
 </body>
 </html>
