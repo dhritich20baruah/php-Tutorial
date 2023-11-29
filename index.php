@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <?php include "header.html" ?>
         <?php 
             $numbers = array(1,2,3,4,5);
             $numbers[3] = 44;
@@ -86,5 +87,58 @@
             }
             echo getMaxOfThree(45,23,53)
           ?>
+
+          <h1>Switch Statement</h1>
+          <form action="index.php" method="post">
+            What was your grade?
+            <input type="text" name="grade">
+            <input type="submit">
+          </form>
+          <?php
+            $grade = $_POST["grade"];
+            switch($grade){
+                case "A":
+                    echo "You did amazing!";
+                    break;
+                case "B":
+                    echo "You did OK";
+                    break;
+                case "C":
+                    echo "You did poorly.";
+                    break;
+                default:
+                    echo "Invalid grade";
+            }
+          ?>
+
+          <h1>While loop</h1>
+          <?php
+            $index = 1;
+            while($index <= 5){
+                echo "$index <br>";
+                $index++;
+            }
+            ?>
+
+         <h1>Do While loop</h1>
+          <?php
+            $index = 6;
+            do{
+                echo "$index <br>";
+                $index++;
+            } while($index <= 5)
+            ?>
+
+           <h1>For loop</h1>
+          <?php
+           $nums = array(4,6,2,5,67,1);
+            for($i = 1; $i < count($nums); $i++){
+                echo "$nums[$i] <br>";
+            }
+            //Single line comment
+            /*
+            Multi line comment
+            */
+            ?>  
 </body>
 </html>
