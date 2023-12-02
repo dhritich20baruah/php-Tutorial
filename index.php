@@ -140,5 +140,12 @@
             Multi line comment
             */
             ?>  
+
+            <?php
+                $title = "My First Post";
+                $author = "Mike";
+                $wordcount = 400;
+                include "artile-header.php"  
+            ?>
 </body>
 </html>
