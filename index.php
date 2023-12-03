@@ -147,5 +147,78 @@
                 $wordcount = 400;
                 include "artile-header.php"  
             ?>
+
+            <h1>CLASSES AND OBJECTS </h1>
+            <?php
+                class Book {
+                    var $title;
+                    var $author;
+                    var $pages;
+
+                    function __construct($aTitle, $aAuthor, $aPages){
+                        $this->title = $aTitle;
+                        $this->author = $aAuthor;
+                        $this->pages = $aPages;
+
+                    }
+                }
+
+                $book1 = new Book(); //An object is an instance of class 
+                $book1->title = "Harry Potter";
+                $book1->author = "JK ROwling";
+                $book1->pages = 400;
+
+                $book2 = new Book( "Call of the wild", "Jack London", 300); //An object is an instance of class 
+             
+                echo $book1->title;
+                echo $book2->title;
+            ?>
+
+            <h1>Object Function</h1>
+            <?php
+                class Student {
+                    var $name;
+                    var $major;
+                    var $percentage;
+
+                   function __construct($name, $major, $percentage){
+                    $this->name = $name;
+                    $this->major = $major;
+                    $this->percentage = $percentage;
+                   }  
+
+                   function hasHonors(){
+                    if($this->percentage >= 70){
+                        return "true";
+                    }
+                       return "false";
+                   }
+                }
+                $student1 = new Student("Jim", "CAD/CAM", 67);
+                $student2 = new Student("Tim", "Quality Control", 70);
+
+                echo $student1->hasHonors()
+            ?>
+
+            <h1>Getters and setters</h1>
+
+            <h1>Class Inheritance</h1>
+            <?php
+                class Chef{
+                    function makeChicken(){
+                        echo "Chef makes Chicken";
+                    }
+                }
+
+                class ItalianChef extends Chef {
+
+                }
+
+                $chef = new Chef();
+                $chef->makeChicken();
+
+                $ItalianChef = new ItalianChef();
+                $ItalianChef->makeChicken();
+            ?>
 </body>
 </html>
